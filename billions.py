@@ -60,7 +60,7 @@ def home(chave):
     st.markdown('---')
 
     with st.form(key='form1'):
-        prompt = st.text_input('Escreva o nome de uma empresa ou pergunte algo relacionado ao mercado financeiro. Exemplo: Petrobrás')
+        prompt = st.text_input('Escreva o nome de uma empresa ou pergunte algo relacionado ao mercado financeiro. Exemplo: Petrobrás. Você também pode se divertir tentando fazer o chatbot falar sobre outros assuntos, mas ele só pensa em negócios')
 
         if prompt == "":
             st.warning('Você deve escrever algo')
