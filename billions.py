@@ -1,5 +1,6 @@
 import streamlit as st
 import yfinance as yf
+import os
 import plotly.graph_objects as go
 import fundamentus as fd
 from modelo import *
