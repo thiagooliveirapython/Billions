@@ -1,9 +1,13 @@
 import streamlit as st
 import yfinance as yf
+from dotenv import load_dotenv
 import os
 import plotly.graph_objects as go
 import fundamentus as fd
 from modelo import *
+
+# Carrega as variáveis de ambiente do arquivo .env
+load_dotenv()
 
 st.set_page_config(layout="wide")
 
@@ -130,7 +134,8 @@ def main():
     lista_menu=['Conheça os ativos', 'Análise Fundamentalista']
     escolha = st.sidebar.radio('Escolha a opção', lista_menu)
     #chave = st.sidebar.text_input('insira sua API_KEY', type="password")
-    chave = st.secrets["chave"]
+    chave=os.getenv("chave")
+    #chave = st.secrets["chave"]
 
     genai.configure(api_key=chave)
 
