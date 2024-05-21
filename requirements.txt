@@ -2,7 +2,6 @@ streamlit
 pandas
 numpy
 plotly
-os
 fundamentus 
 yfinance
 google.generativeai
