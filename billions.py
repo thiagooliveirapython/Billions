@@ -130,12 +130,12 @@ def main():
     lista_menu=['Conheça os ativos', 'Análise Fundamentalista']
     escolha = st.sidebar.radio('Escolha a opção', lista_menu)
     #chave = st.sidebar.text_input('insira sua API_KEY', type="password")
+    chave = st.secrets["chave"]
 
     genai.configure(api_key=chave)
 
     if escolha =='Conheça os ativos':
-        #chave = testa_chave(chave)
-        chave = st.secrets["chave"]
+        #chave = testa_chave(chave)      
         if chave == "erro":
             pass
         else:
